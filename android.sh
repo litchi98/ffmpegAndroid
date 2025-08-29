@@ -18,9 +18,9 @@ ENABLED_CONFIG="\
 		--enable-libdav1d \
 		--enable-demuxer=* \
 		--enable-encoder=mpeg4 \
-		--enable-encoder=aac \  
-		--enable-encoder=h264 \  
-        --enable-decoder=aac \  
+		--enable-encoder=aac \
+		--enable-encoder=h264 \
+        --enable-decoder=aac \
 		--enable-decoder=mp3 \
 		--enable-muxer=mov \
 		--enable-muxer=3gp \
