@@ -13,43 +13,40 @@ ENABLED_CONFIG="\
 		--enable-avformat \
 		--enable-avutil \
 		--enable-swscale \
-		--enable-swresample \  # 启用音频重采样（代码中处理音频必用）
-		--enable-avfilter \    # 启用滤镜（代码中drawtext字幕必用）
+		--enable-swresample \
+		--enable-avfilter \
 		--enable-libdav1d \
-		--enable-demuxer=* \   # 保留原有：启用所有解码器（读取视频/音频文件）
-		# 关键：启用需要的编码器（生成音视频流）
-		--enable-encoder=mpeg4 \  # 视频编码器（代码中用 AV_CODEC_ID_MPEG4）
-		--enable-encoder=aac \    # 音频编码器（代码中用 AV_CODEC_ID_AAC）
-		--enable-encoder=h264 \   # 可选：若后续需H264编码，可保留
-		# 关键：启用需要的复用器（生成MP4/MOV/3GP文件）
-		--enable-muxer=mov \      # 支持 MP4/MOV（核心，MP4依赖mov复用器）
-		--enable-muxer=3gp \      # 支持 3GP 格式
-		--enable-muxer=mp4 \      # 显式启用MP4（部分版本需单独指定，保险）
-		# 关键：启用滤镜和文件协议
-		--enable-filter=drawtext \# 启用字幕绘制滤镜（代码中添加字幕必用）
-		--enable-protocol=file \  # 启用文件协议（读取本地文件必用）
+		--enable-demuxer=* \
+		--enable-encoder=mpeg4 \
+		--enable-encoder=aac \
+		--enable-encoder=h264 \
+		--enable-muxer=mov \
+		--enable-muxer=3gp \
+		--enable-muxer=mp4 \
+		--enable-filter=drawtext \
+		--enable-protocol=file \
 		--enable-parser=* \
 		--enable-bsf=* \
-		--enable-shared "
+		--enable-shared"  
 
 
 ### Disable FFMPEG BUILD MODULES ####
-DISABLED_CONFIG="\
-		--disable-small \       # 保留：不启用体积优化（不影响功能）
-		--disable-zlib \        # 保留：若无需zlib压缩，可禁用
-		--disable-v4l2-m2m \    # 保留：禁用硬件编码（若需硬件编码可删除）
-		--disable-cuda-llvm \   # 保留：禁用CUDA（Android无需）
-		--disable-indevs \      # 保留：禁用输入设备（无需）
-		--disable-libxml2 \     # 保留：无需libxml2
-		--disable-avdevice \    # 保留：禁用设备相关（无需）
-		--disable-network \     # 保留：禁用网络（仅处理本地文件）
-		--disable-static \      # 保留：仅生成动态库（.so）
-		--disable-debug \       # 保留：Release模式
-		--disable-ffplay \      # 保留：禁用播放器
-		--disable-ffprobe \     # 保留：禁用探针工具
-		--disable-doc \         # 保留：禁用文档
-		--disable-symver \      # 保留：禁用符号版本
-		--disable-gpl "         # 保留：若无需GPL组件（如x264），可禁用
+DISABLED_CONFIG="\  
+		--disable-small \  
+		--disable-zlib \
+		--disable-v4l2-m2m \
+		--disable-cuda-llvm \
+		--disable-indevs \
+		--disable-libxml2 \
+		--disable-avdevice \
+		--disable-network \
+		--disable-static \
+		--disable-debug \
+		--disable-ffplay \
+		--disable-ffprobe \
+		--disable-doc \
+		--disable-symver \
+		--disable-gpl"  
 
 
 ############ Dont Change ################
