@@ -27,7 +27,7 @@ ENABLED_CONFIG="\
 		--enable-protocol=file \
 		--enable-parser=* \
 		--enable-bsf=* \
-		--enable-shared"  
+		--enable-shared "  
 
 
 ### Disable FFMPEG BUILD MODULES ####
@@ -44,9 +44,9 @@ DISABLED_CONFIG="\ 
 		--disable-debug \
 		--disable-ffplay \
 		--disable-ffprobe \
-		--disable-doc \
+		--disable-doc \  
 		--disable-symver \
-		--disable-gpl"  
+		--disable-gpl "  
 
 
 ############ Dont Change ################
