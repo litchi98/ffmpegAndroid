@@ -31,8 +31,8 @@ ENABLED_CONFIG="\
 
 
 ### Disable FFMPEG BUILD MODULES ####
-DISABLED_CONFIG="\  
-		--disable-small \  
+DISABLED_CONFIG="\
+		--disable-small \
 		--disable-zlib \
 		--disable-v4l2-m2m \
 		--disable-cuda-llvm \
@@ -44,9 +44,9 @@ DISABLED_CONFIG="\ 
 		--disable-debug \
 		--disable-ffplay \
 		--disable-ffprobe \
-		--disable-doc \  
+		--disable-doc \
 		--disable-symver \
-		--disable-gpl "  
+		--disable-gpl "
 
 
 ############ Dont Change ################
