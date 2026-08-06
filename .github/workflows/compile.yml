@@ -38,9 +38,10 @@ jobs:
       run: |
         chmod +x ./android.sh
       
-    - name: Clone latest FFmpeg
+    - name: Clone pinned FFmpeg
       run: |
         git clone https://github.com/FFmpeg/FFmpeg.git ffmpeg
+        git -C ffmpeg checkout 613925a96e
         echo "FFMPEG_SOURCE_DIR=$GITHUB_WORKSPACE/ffmpeg" >> $GITHUB_ENV
 
     - name: Create build directory
